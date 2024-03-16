@@ -1,0 +1,135 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap')
+
+$base-color: #6c4a04
+$bg-color: #fefbf6
+$text-color: #000
+$font-family: "Roboto", sans-serif
+
+*
+    margin: 0
+    padding: 0
+    box-sizing: border-box
+    // outline: 1px solid red
+
+body, input, button, textarea, option
+    font-family: $font-family
+    color: $text-color
+
+::-webkit-scrollbar
+    width: 12px
+
+::-webkit-scrollbar-track
+    border-radius: 10px
+
+::-webkit-scrollbar-thumb
+    background: $base-color
+    border-radius: 10px
+
+::-webkit-scrollbar-thumb:hover
+    background: darken($base-color, 6%)
+
+.form-container
+    position: absolute
+    width: 600px
+    top: 50%
+    left: 50%
+    transform: translate(-50%, -50%)
+    padding: 20px
+    border: 3px solid $base-color
+    border-radius: 20px
+    background: $bg-color
+    .form
+        width: 100%
+        height: 90vh
+        padding: 10px
+        margin: auto
+        display: flex
+        flex-direction: column
+        justify-content: space-between
+        .form__title
+            color: $base-color
+            margin-bottom: 20px
+            text-align: center
+        .form__main
+            height: 70vh
+            padding: 0 20px
+            overflow-y: auto
+            .form__group
+                margin: 0 0 30px
+                .group__title
+                    color: $base-color
+                    padding-bottom: 10px
+                    margin-bottom: 10px
+                    border-bottom: 1px solid $base-color
+                .text-info
+                    margin: 10px 0
+                .form__block
+                    margin: 10px 0 15px
+                    .form__label
+                        float: left
+                    .text-error
+                        float: left
+                        margin-left: 10px
+                    .form__input, .form__select:not([multiple])
+                        height: 26px
+                        padding: 6px
+                        outline: none
+                    .form__input
+                        margin: 5px 0
+                        width: 100%
+                        border: 1px solid $base-color
+                        border-radius: 5px
+                    .form__select
+                        margin: 5px 0
+                        width: 100%
+                        option
+                    .form__input[type="checkbox"]
+                        display: inline
+                        margin: 1px 10px
+                        height: 18px
+                        width: 18px
+        .form__footer
+            display: flex
+            flex-direction: column
+            align-items: center
+            .text-success
+                margin-bottom: 10px
+            .form__button-submit
+                height: 40px
+                width: 50%
+                background-color: $base-color
+                color: white
+                border: none
+                border-radius: 10px
+                font-size: 1rem
+                transition: all 200ms ease-out
+                &:hover
+                    background-color: darken($base-color, 4%)
+                    scale: 1.02
+                &:active
+                    background-color: darken($base-color, 6%)
+                    scale: 0.99
+
+.text-info
+    font-size: 0.9rem
+
+.text-required
+    font-size: 0.9rem
+    color: red
+
+.text-error
+    font-size: 0.9rem
+    color: red
+
+.text-success
+    color: green
+
+@media screen and (max-width: 630px)
+    .form-container
+        width: 100%
+        height: 100%
+        border: none
+        border-radius: 0
+        padding: 10px 0
+        .form
+            height: 100%

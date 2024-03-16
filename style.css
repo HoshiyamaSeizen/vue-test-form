@@ -1,0 +1,161 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body, input, button, textarea, option {
+  font-family: "Roboto", sans-serif;
+  color: #000;
+}
+
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+::-webkit-scrollbar-track {
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #6c4a04;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #4e3603;
+}
+
+.form-container {
+  position: absolute;
+  width: 600px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 20px;
+  border: 3px solid #6c4a04;
+  border-radius: 20px;
+  background: #fefbf6;
+}
+.form-container .form {
+  width: 100%;
+  height: 90vh;
+  padding: 10px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.form-container .form .form__title {
+  color: #6c4a04;
+  margin-bottom: 20px;
+  text-align: center;
+}
+.form-container .form .form__main {
+  height: 70vh;
+  padding: 0 20px;
+  overflow-y: auto;
+}
+.form-container .form .form__main .form__group {
+  margin: 0 0 30px;
+}
+.form-container .form .form__main .form__group .group__title {
+  color: #6c4a04;
+  padding-bottom: 10px;
+  margin-bottom: 10px;
+  border-bottom: 1px solid #6c4a04;
+}
+.form-container .form .form__main .form__group .text-info {
+  margin: 10px 0;
+}
+.form-container .form .form__main .form__group .form__block {
+  margin: 10px 0 15px;
+}
+.form-container .form .form__main .form__group .form__block .form__label {
+  float: left;
+}
+.form-container .form .form__main .form__group .form__block .text-error {
+  float: left;
+  margin-left: 10px;
+}
+.form-container .form .form__main .form__group .form__block .form__input, .form-container .form .form__main .form__group .form__block .form__select:not([multiple]) {
+  height: 26px;
+  padding: 6px;
+  outline: none;
+}
+.form-container .form .form__main .form__group .form__block .form__input {
+  margin: 5px 0;
+  width: 100%;
+  border: 1px solid #6c4a04;
+  border-radius: 5px;
+}
+.form-container .form .form__main .form__group .form__block .form__select {
+  margin: 5px 0;
+  width: 100%;
+}
+.form-container .form .form__main .form__group .form__block .form__input[type=checkbox] {
+  display: inline;
+  margin: 1px 10px;
+  height: 18px;
+  width: 18px;
+}
+.form-container .form .form__footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.form-container .form .form__footer .text-success {
+  margin-bottom: 10px;
+}
+.form-container .form .form__footer .form__button-submit {
+  height: 40px;
+  width: 50%;
+  background-color: #6c4a04;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-size: 1rem;
+  transition: all 200ms ease-out;
+}
+.form-container .form .form__footer .form__button-submit:hover {
+  background-color: #583d03;
+  scale: 1.02;
+}
+.form-container .form .form__footer .form__button-submit:active {
+  background-color: #4e3603;
+  scale: 0.99;
+}
+
+.text-info {
+  font-size: 0.9rem;
+}
+
+.text-required {
+  font-size: 0.9rem;
+  color: red;
+}
+
+.text-error {
+  font-size: 0.9rem;
+  color: red;
+}
+
+.text-success {
+  color: green;
+}
+
+@media screen and (max-width: 630px) {
+  .form-container {
+    width: 100%;
+    height: 100%;
+    border: none;
+    border-radius: 0;
+    padding: 10px 0;
+  }
+  .form-container .form {
+    height: 100%;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
