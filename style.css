@@ -81,7 +81,6 @@ body, input, button, textarea, option {
 }
 .form-container .form .form__main .form__group .form__block .form__input, .form-container .form .form__main .form__group .form__block .form__select:not([multiple]) {
   height: 26px;
-  padding: 6px;
   outline: none;
 }
 .form-container .form .form__main .form__group .form__block .form__input {
@@ -89,10 +88,14 @@ body, input, button, textarea, option {
   width: 100%;
   border: 1px solid #6c4a04;
   border-radius: 5px;
+  padding: 6px;
 }
 .form-container .form .form__main .form__group .form__block .form__select {
   margin: 5px 0;
   width: 100%;
+  border: 1px solid #6c4a04;
+  border-radius: 5px;
+  padding: 3px;
 }
 .form-container .form .form__main .form__group .form__block .form__input[type=checkbox] {
   display: inline;
